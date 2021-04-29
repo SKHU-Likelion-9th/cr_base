@@ -17,9 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from blog.views import *
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
     path('<str:id>', detail, name="detail"), # 데이터 베이스의 id값 
     path('new/', new, name="new"),
+    path('create/', create, name="create"),
 ]

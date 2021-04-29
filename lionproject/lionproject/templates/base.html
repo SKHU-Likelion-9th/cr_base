@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Likelion 9th</title>
+    <link rel="shortcut icon" type="image⁄x-icon" href="{% static 'blog/img/logo.png '%}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="{% static 'blog/css/styles.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">Likelion</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'new' %}">Write</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Signup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+    <header class="masthead">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                      <h1><span class="flicker">MY </span
+                        ><span class="fast-flicker">BLOG</span>
+                      </h1>
+                        <br>
+                        <span class="subheading"><b>Likelion 9th</b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+ {% block content %}
+ {% endblock %}
+
+    <footer>
+      <p class="copyright text-muted">LikeLion at SKHU 9th.</p>
+    </footer>
+
+</body>
+</html>
+
