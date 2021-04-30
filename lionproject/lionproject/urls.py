@@ -27,3 +27,5 @@ urlpatterns = [
     path('new/', new, name="new"),
     path('create/', create, name="create"),
 ]
+
+

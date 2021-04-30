@@ -1,39 +1,29 @@
-{% extends 'base.html' %}  
-{% block content %}
-{% load static %}
-
-
-
-
+{% extends 'base.html' %} 
+{% block content %} 
+{% load static %} 
 
 {% for blog in blogs %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="post-preview">
+        <a href="{% url 'detail' blog.id %}">
+          <h2 class="post-title">{{blog.title}}</h2>
+        </a>
 
-   <!-- Main Content-->
-   <div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-           
-           
-            <div class="post-preview">
-                <a href="{% url 'detail' blog.id %}">
-                    <h2 class="post-title">{{blog.title}}</h2>
-                  
-                </a>
-                
-                <h3 class="post-subtitle">{{blog.summary}}</h3>
-                <p class="post-meta">
-                  {{blog.writer}} &ensp;
-                    on July 8, 2021
-                </p>
-            </div>
-            <hr />
-            <!-- Pager-->
-            <div class="clearfix"><a class="btn btn-primary float-right" href="{% url 'detail' blog.id %}">더보기 →</a></div>
-        </div>
+        <h3 class="post-subtitle">{{blog.summary}}</h3>
+        <p class="post-meta">{{blog.writer}} &ensp; on July 8, 2021</p>
+      </div>
+      <hr />
+
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" href="{% url 'detail' blog.id %}"> 더보기 →</a>
+      </div>
     </div>
+  </div>
 </div>
 <hr />
 
+{% endfor %} 
 
-
-{% endfor %} {% endblock %}
+{% endblock %}

@@ -24,3 +24,29 @@ def create(request):
     new_blog.pub_date = timezone.now()
     new_blog.save()
     return redirect('detail', new_blog.id)
+
+
+
+# 여기에 edit 함수 만들어 주세요
+
+
+
+
+
+
+
+# def update(request, id):
+#     update_blog = Blog.objects.get(id = id)
+#     update_blog.title = request.POST['title']
+#     update_blog.writer = request.POST['writer']
+#     update_blog.body = request.POST['body']
+#     update_blog.pub_date = timezone.now()
+#     update_blog.save()
+#     return redirect('detail', update_blog.id)  
+
+
+
+
+
+
+    

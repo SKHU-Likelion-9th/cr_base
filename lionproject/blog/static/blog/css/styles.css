@@ -139,7 +139,23 @@ dd {
   margin-bottom: 0.5rem;
   margin-left: 0;
 }
+.col-lg-8 > a{
+  all: unset;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #b33939;
+  
 
+}
+
+.col-lg-8 > a:hover{
+  all: unset;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0a3d62;
+}
 blockquote {
   margin: 0 0 1rem;
 }
