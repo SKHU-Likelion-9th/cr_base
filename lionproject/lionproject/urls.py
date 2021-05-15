@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
-    path('<str:id>', detail, name="detail"), # 데이터 베이스의 id값 
+    path('<str:id>', detail, name="detail"), # 데이터 베이스의 id값, 수정 & 삭제 기능과 같은 패턴 
     path('new/', new, name="new"),
     path('create/', create, name="create"),
 ]

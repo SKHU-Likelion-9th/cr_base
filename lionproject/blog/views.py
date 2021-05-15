@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404 
+# get_object_or_404이란 서버에 없는 페이지를 요청했을 경우 띄워주는 에러창 
 from .models import Blog
 from django.utils import timezone
 
@@ -8,8 +9,10 @@ def home(request):
     blogs = Blog.objects.all()
     return render(request, 'home.html', {'blogs' : blogs})
 
-def detail(request, id):
-    blog = get_object_or_404(Blog, pk = id) # 찾을 수 없다는 예외처리를 해준 것임
+def detail(request, id): # 이것도 마찬가지로 해당 글만 나와야 하므로 id를 매개변수로 받아옴
+    blog = get_object_or_404(Blog, pk = id) 
+    # id값이 있는 해당 데이터를 가져오거나 데이터가 없을 경우에 404에러를 띄우라는 의미
+    # pk = primary key (기본키)
     return render(request, 'detail.html', {'blog' : blog})
 
 def new(request):
@@ -35,6 +38,7 @@ def create(request):
 
 
 
+
 # def update(request, id):
 #     update_blog = Blog.objects.get(id = id)
 #     update_blog.title = request.POST['title']
@@ -42,8 +46,7 @@ def create(request):
 #     update_blog.body = request.POST['body']
 #     update_blog.pub_date = timezone.now()
 #     update_blog.save()
-#     return redirect('detail', update_blog.id)  
-
+#     return redirect('detail', update_blog.id)
 
 
 

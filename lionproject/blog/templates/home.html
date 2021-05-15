@@ -12,12 +12,13 @@
         </a>
 
         <h3 class="post-subtitle">{{blog.summary}}</h3>
-        <p class="post-meta">{{blog.writer}} &ensp; on July 8, 2021</p>
+        <p class="post-meta">{{blog.writer}} &ensp; {{blog.pub_date}}</p>
       </div>
       <hr />
 
       <div class="clearfix">
         <a class="btn btn-primary float-right" href="{% url 'detail' blog.id %}"> 더보기 →</a>
+        <!-- blog.id를 함으로써 해당 글로 연결해준 것 -->
       </div>
     </div>
   </div>
